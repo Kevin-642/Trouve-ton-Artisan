@@ -1,21 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { artisan, ArtisansDataServiceService } from '../../artisans-data-service.service';
+
+import { artisan, ArtisansDataServiceService } from '../artisans-data-service.service';
 
 @Component({
   selector: 'app-services',
-  standalone: true,
-  imports: [],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
-export class ServicesComponent {
-
+export class ServicesComponent implements OnInit {
+  
   servicesArtisans: artisan[] = [];
 
   constructor(private ArtisansDataService: ArtisansDataServiceService,
     private router: Router ) { }
-
+    
   ngOnInit(): void {
     this.servicesArtisans = this.ArtisansDataService.getArtisansByCategory('Services');
   }

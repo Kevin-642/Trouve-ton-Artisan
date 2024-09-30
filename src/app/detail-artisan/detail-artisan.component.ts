@@ -1,7 +1,7 @@
-import { Component, Inject, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { artisan,ArtisansDataServiceService } from '../../artisans-data-service.service';
+import { artisan, ArtisansDataServiceService } from '../artisans-data-service.service';
 //Formulaire
 import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
 
@@ -11,12 +11,6 @@ import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
   styleUrl: './detail-artisan.component.scss'
 })
 export class DetailArtisanComponent implements OnInit{
-  public get ArtisanDataServices(): ArtisansDataServiceService {
-    return this.ArtisanDataServices;
-  }
-  public set ArtisanDataServices(value: ArtisansDataServiceService) {
-    this.ArtisanDataServices = value;
-  }
 
   artisan: artisan | undefined;
   //Formulaire
@@ -25,10 +19,10 @@ export class DetailArtisanComponent implements OnInit{
   successMessage = '';
   errorMessage = '';
 
+  
 
-
-  constructor(@Inject (ArtisansDataServiceService)private route: ActivatedRoute,private router: Router,
-    private fb:FormBuilder) {
+  constructor(private route: ActivatedRoute,private router: Router,
+    private ArtisanDataServices: ArtisansDataServiceService, private fb:FormBuilder) {
 
       //form
       this.contactForm = this.fb.group({
@@ -39,7 +33,7 @@ export class DetailArtisanComponent implements OnInit{
     }
     ngOnInit() {
       const id = this.route.snapshot.paramMap.get('id');
-      if (id) {
+      if (id) { 
         this.ArtisanDataServices.getArtisanId(id).subscribe((data: artisan | undefined) => {
           this.artisan = data;
         });
@@ -63,7 +57,7 @@ export class DetailArtisanComponent implements OnInit{
       this.contactForm.reset();
       this.submitted = false;
     }
-    //get pour acceder facilement au formulaire du template
+    //get pour acceder facilement au formulaire du template 
     get formControls() {
       return this.contactForm.controls;
     }

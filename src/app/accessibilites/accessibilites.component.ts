@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-accessibilite',
+  selector: 'app-accessibilites',
   templateUrl: './accessibilites.component.html',
   styleUrl: './accessibilites.component.scss'
 })
-export class AccessibiliteComponent {
+export class AccessibilitesComponent {
 
 }

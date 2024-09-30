@@ -1,6 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { artisan, ArtisansDataServiceService } from '../../artisans-data-service.service';
+import { artisan, ArtisansDataServiceService } from '../artisans-data-service.service';
 
 
 @Component({
@@ -9,10 +9,10 @@ import { artisan, ArtisansDataServiceService } from '../../artisans-data-service
   styleUrl: './liste-artisans.component.scss'
 })
 export class ListeArtisansComponent implements OnInit {
-
+  
   artisans: artisan[] = [];
 
-constructor(@Inject(ArtisansDataServiceService)private ArtisansDataServices: ArtisansDataServiceService,
+constructor(private ArtisansDataServices: ArtisansDataServiceService,
   private router: Router, ) { }
 
 ngOnInit(): void {

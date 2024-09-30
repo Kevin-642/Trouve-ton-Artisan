@@ -8,10 +8,10 @@ describe('RechercheResultsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RechercheResultsComponent]
+      declarations: [RechercheResultsComponent]
     })
     .compileComponents();
-
+    
     fixture = TestBed.createComponent(RechercheResultsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

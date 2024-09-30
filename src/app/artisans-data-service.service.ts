@@ -115,7 +115,7 @@ export class ArtisansDataServiceService {
         email:"contact@cm-graphisme.com",
         website:"https://cm-graphisme.com",
         category:"Services",
-        top: false
+        top: true
       },
       {
         id: "9",
@@ -127,7 +127,7 @@ export class ArtisansDataServiceService {
         email:"o-salmons@live.com",
         website:"",
         category:"Bâtiment",
-        top: true
+        top: false
       },
       {
         id: "10",
@@ -139,7 +139,7 @@ export class ArtisansDataServiceService {
         email:"aupainchaud@hotmail.com",
         website:"",
         category:"Alimentation",
-        top: true
+        top: false
       },
       {
         id: "11",
@@ -211,7 +211,7 @@ export class ArtisansDataServiceService {
         email:"e-carigan@hotmail.com",
         website:"",
         category:"Fabrication",
-        top: false
+        top: true
       },
       {
         id: "17",

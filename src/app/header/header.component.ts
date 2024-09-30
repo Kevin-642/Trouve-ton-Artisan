@@ -18,5 +18,5 @@ export class HeaderComponent {
       this.router.navigate(['/search'], { queryParams: {query: this.searchQuery} });
     }
   }
-
+  
 }

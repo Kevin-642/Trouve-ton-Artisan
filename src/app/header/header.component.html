@@ -1,35 +1,35 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-          <img src="../../assets/image/Logo.png" alt="Logo" class="d-inline-block align-text-top">
-        </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['artisans']">Les artisans</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Catégories
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../../assets/image/Logo.png" alt="Logo" class="d-inline-block align-text-top">
           </a>
-          <ul class="dropdown-menu">
-              <li class="nav-item mx-0 mx-lg-1"><a [routerLink]="['batiment']" class="categories nav-link py-3 px-0 px-lg-3 rounded">Bâtiment</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a [routerLink]="['services']" class="nav-link py-3 px-0 px-lg-3 rounded">Services</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a [routerLink]="['fabrication']" class="nav-link py-3 px-0 px-lg-3 rounded">Fabrication</a></li>
-              <li class="nav-item mx-0 mx-lg-1"><a [routerLink]="['alimentaire']" class="nav-link py-3 px-0 px-lg-3 rounded">Alimentaire</a></li>
-            </ul>
-        </li>
-      </ul>
-      <form class="d-flex" role="search" (submit)="onSearch()">
-        <input class="form-control me-2" type="search" placeholder="Rechercher un artisan" aria-label="Search" [(ngModel)]="searchQuery" name="searchQuery">
-        <button> class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/']">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['artisans']">Les artisans</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Catégories
+            </a>
+            <ul class="dropdown-menu">
+                <li class="nav-item mx-0 mx-lg-1"><a [routerLink]="['batiment']" class="categories nav-link py-3 px-0 px-lg-3 rounded">Bâtiment</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a [routerLink]="['services']" class="nav-link py-3 px-0 px-lg-3 rounded">Services</a></li>
+                  <li class="nav-item mx-0 mx-lg-1"><a [routerLink]="['fabrication']" class="nav-link py-3 px-0 px-lg-3 rounded">Fabrication</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a [routerLink]="['alimentaire']" class="nav-link py-3 px-0 px-lg-3 rounded">Alimentaire</a></li>
+              </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" (submit)="onSearch()">
+          <input class="form-control me-2" type="search" placeholder="Rechercher un artisan" aria-label="Search" [(ngModel)]="searchQuery" name="searchQuery">
+          <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>

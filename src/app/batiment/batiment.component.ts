@@ -1,7 +1,7 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { artisan, ArtisansDataServiceService } from '../../artisans-data-service.service';
+import { artisan, ArtisansDataServiceService } from '../artisans-data-service.service';
 
 @Component({
   selector: 'app-batiment',
@@ -12,9 +12,9 @@ import { artisan, ArtisansDataServiceService } from '../../artisans-data-service
 export class BatimentComponent implements OnInit {
   batimentArtisans: artisan[] = [];
 
-  constructor(@Inject(ArtisansDataServiceService) private ArtisansDataServices: ArtisansDataServiceService,
-  private router: Router ) { }
-
+  constructor(private ArtisansDataServices: ArtisansDataServiceService,
+    private router: Router ) { }
+  
   ngOnInit(): void {
     this.batimentArtisans = this.ArtisansDataServices.getArtisansByCategory('Bâtiment');
   }

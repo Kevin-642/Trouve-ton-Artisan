@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
-import { artisan, ArtisansDataServiceService } from '../../artisans-data-service.service';
+import { artisan, ArtisansDataServiceService } from '../artisans-data-service.service';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   searchTerm: string = '';
 
   constructor (
-    private artisansDataService : ArtisansDataServiceService,
+    private artisansDataService : ArtisansDataServiceService, 
     private router: Router) {}
 
     ngOnInit(): void {
